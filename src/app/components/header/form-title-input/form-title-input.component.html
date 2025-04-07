@@ -1,0 +1,14 @@
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+        <input 
+            matInput
+            [(ngModel)]="formName" 
+            name="formName"
+            (ngModelChange)="updateFormName($event)"
+            (blur)="updateFormName(formName)"
+            #message 
+            maxlength="256" 
+            placeholder="Nazwa formularza">
+        <mat-hint class="mat-mdc-form-field-hint-end">{{message.value.length}} / 256</mat-hint>
+    </mat-form-field>
+  </form>
